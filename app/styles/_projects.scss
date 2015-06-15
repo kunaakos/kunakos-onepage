@@ -1,0 +1,29 @@
+.projects {
+	article {
+		float: left;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+
+		padding: 10px;
+		
+		@media #{$small-only} {
+			width: 100%;
+		}
+		@media #{$medium-only} {
+			width: 50%;
+		}
+		@media #{$large-up} {
+			width: 33%;
+		}
+
+		img {
+			width: 100%;
+		}
+		h3 {
+
+		}
+		p {
+
+		}
+	}
+}
