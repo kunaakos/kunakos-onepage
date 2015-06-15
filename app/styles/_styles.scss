@@ -14,7 +14,12 @@ main, header {
 	margin: 0 auto;
 }
 
+section {
+	margin-bottom: 3rem;
+}
+
 @import "projects";
+@import "social";
 
 .browsehappy {
   margin: 0.2em 0;
