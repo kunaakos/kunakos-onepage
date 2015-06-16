@@ -314,7 +314,8 @@ module.exports = function (grunt) {
     // Copies remaining files to places other tasks can use
     copy: {
       dist: {
-        files: [{
+        files: [
+        {
           expand: true,
           dot: true,
           cwd: '<%= config.app %>',
@@ -325,10 +326,21 @@ module.exports = function (grunt) {
             '{,*/}*.html',
             'styles/fonts/{,*/}*.*'
           ]
-        }, {
+        },
+        {
+          expand: true,
+          dot: true,
+          cwd: 'bower_components/font-awesome/fonts',
+          dest: '<%= config.dist %>/fonts/',
+          src: [
+            '{,*/}*.*'
+          ]
+        },
+        {
           src: 'node_modules/apache-server-configs/dist/.htaccess',
           dest: '<%= config.dist %>/.htaccess'
-        }]
+        }
+        ]
       },
       styles: {
         expand: true,
@@ -354,6 +366,19 @@ module.exports = function (grunt) {
         'imagemin',
         'svgmin'
       ]
+    },
+
+    'ftp-deploy': {
+      production: {
+        auth: {
+          host: 'kunakos.ro',
+          port: 21,
+          authKey: 'production'
+        },
+        src: '<%= config.dist %>/',
+        dest: '/',
+        exclusions: []
+      }
     }
   });
 
@@ -415,5 +440,10 @@ module.exports = function (grunt) {
     'newer:jshint',
     'test',
     'build'
+  ]);
+
+  grunt.registerTask('deploy', [
+    'build',
+    'ftp-deploy'
   ]);
 };
