@@ -1,5 +1,8 @@
 .social {
 	clear: both;
+	@media #{$medium-up} {
+		border-right: 1rem solid $bgcolor;
+	}
 	text-align: center;
 	background: $textcolor-lite;
 	padding-top: 0.75rem;

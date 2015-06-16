@@ -19,7 +19,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 main, header {
-	@media #{$small-up} {
+	@media #{$small-only} {
+		width: 95%;
+	}
+	@media #{$medium-up} {
 		width: 90%;
 	}
 	@media #{$large-up} {

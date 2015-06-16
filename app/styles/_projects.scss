@@ -3,8 +3,8 @@
 	h1 {
 		font-size: 4rem;
 		@include funkytext();
-		margin-top: 2em;
-		margin-bottom: 0.25em;			
+		margin-top: 1.2em;
+		margin-bottom: 0.35em;			
 
 	}
 	article {
@@ -14,7 +14,9 @@
 		box-sizing: border-box;
 		margin-bottom: 2rem;
 		border-left: 0.7rem solid $textcolor-lite;
-		border-right: 1rem solid $bgcolor;
+		@media #{$medium-up} {
+			border-right: 1rem solid $bgcolor;
+		}
 		background: white;
 		@media #{$small-only} {
 			width: 100%;
@@ -22,17 +24,20 @@
 		@media #{$medium-up} {
 			width: 50%;
 		}
-		img {
-			width: 100%;
-		}
-		h3 {
-			font-size: 2rem;
-			font-weight: bold;
-			margin: 1rem 0 0 0;
-			background: $textcolor-lite;
-			color: $white;
-			padding: 0.5rem 1rem 0.2rem 0;
-			margin-top: 0;
+		a {
+			text-decoration: none;
+			img {
+				width: 100%;
+			}
+			h3 {
+				font-size: 2rem;
+				font-weight: bold;
+				margin: 1rem 0 0 0;
+				background: $textcolor-lite;
+				color: $white;
+				padding: 0.5rem 1rem 0.2rem 0;
+				margin-top: 0;
+			}
 		}
 		p {
 			margin: 1rem;
@@ -49,7 +54,7 @@
 				margin: 6px 6px 0px 0px;
 				a {
 					color: white;
-					// text-decoration: none;
+					text-decoration: underline;
 				}
 			}
 		}
