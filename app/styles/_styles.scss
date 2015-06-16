@@ -1,5 +1,5 @@
 body {
-  background: #fafafa;
+  background: $bgcolor;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: $textcolor;
   margin: 0;
@@ -8,13 +8,13 @@ body {
 a {
 	color: $textcolor;
 	&:hover {
-		color: lighten($textcolor, 15%);
+		color: $textcolor-lite;
 	}
 }
 
 h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
-	color: lighten($textcolor, 15%);
+	color: $textcolor-lite;
 	font-weight: bold;
 }
 
@@ -27,10 +27,6 @@ main, header {
 	}
 	margin: 0 auto;
 	max-width: 85rem;
-}
-
-header, section {
-	@include clearfix();
 }
 
 section {

@@ -1,5 +1,7 @@
 $textcolor: #333;
-
+$textcolor-lite: lighten($textcolor, 15%);
+$bgcolor: #E7E7E7; 
+$white: #fff;
 
 @mixin clearfix() {
 	&:after { 
@@ -7,4 +9,13 @@ $textcolor: #333;
 	   display: block; 
 	   clear: both;
 	}
+}
+@mixin funkytext() {
+	color: $white;
+	text-shadow:
+	    -0.04em -0.04em 0 #42B1B1,
+	    0.04em -0.04em 0 #A849A8,
+	    -0.04em 0.04em 0 #ADAD50,
+	    0.04em 0.04em 0 $textcolor-lite;
+	letter-spacing: 0.1em;
 }

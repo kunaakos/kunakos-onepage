@@ -1,6 +1,7 @@
 .social {
+	clear: both;
 	text-align: center;
-	background: lighten($textcolor, 15%);
+	background: $textcolor-lite;
 	padding-top: 0.75rem;
 	padding-bottom: 1.5rem;
 	h2{
