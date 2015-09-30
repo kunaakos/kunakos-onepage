@@ -1,12 +1,12 @@
 $textcolor: #333;
 $textcolor-lite: lighten($textcolor, 15%);
-$bgcolor: #E7E7E7; 
+$bgcolor: #E7E7E7;
 $white: #fff;
 
 @mixin clearfix() {
-	&:after { 
+	&:after {
 	   content: "";
-	   display: block; 
+	   display: block;
 	   clear: both;
 	}
 }

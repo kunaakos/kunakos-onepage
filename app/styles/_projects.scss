@@ -4,7 +4,7 @@
 		font-size: 4rem;
 		@include funkytext();
 		margin-top: 1.2em;
-		margin-bottom: 0.35em;			
+		margin-bottom: 0.35em;
 
 	}
 	article {
@@ -21,7 +21,7 @@
 		@media #{$small-only} {
 			width: 100%;
 		}
-		@media #{$medium-up} {
+		@media #{$large-up} {
 			width: 50%;
 		}
 		a {
@@ -41,6 +41,9 @@
 		}
 		p {
 			margin: 1rem;
+			a {
+				text-decoration: underline;
+			}
 		}
 		.ingredients {
 			list-style-type: none;

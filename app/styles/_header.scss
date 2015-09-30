@@ -3,7 +3,7 @@ header {
 		margin-top: 3.5rem;
 		font-size: 4rem;
 		margin-bottom: 1rem;
-		@include funkytext();			
+		@include funkytext();
 
 	}
 }
@@ -15,6 +15,6 @@ header {
 		@media #{$large-up} {
 		}
 		max-width: 45rem;
-		padding-right: 1rem; 
+		padding-right: 1rem;
 	}
 }
